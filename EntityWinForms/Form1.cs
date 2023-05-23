@@ -75,7 +75,19 @@ namespace EntityWinForms
             //UsersComm.Parameters.Add("@Uo", MySqlDbType.VarChar).Value = this.text_company.Text;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Delete form2 = new Delete();
+            form2.Show();
+            this.Hide();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Edit form2 = new Edit();
+            form2.Show();
+            this.Hide();
+        }
 
         public string CalculateMD5Hash(string input)
         {

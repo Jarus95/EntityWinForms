@@ -11,39 +11,38 @@ using System.Windows.Forms;
 
 namespace EntityWinForms
 {
-    public partial class Form2 : Form
+    public partial class Edit : Form
     {
-        AppdbContext db;
-        public Form2()
+        AppdbContext appdbContext;
+        public string idorg;
+        public Edit()
         {
             InitializeComponent();
-            db = new AppdbContext();
+            appdbContext = new AppdbContext();
+
+            var value = appdbContext.mcrm_users.Last();
+            id_input.Text = value.id_org.ToString();
+            idorg = id_input.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //OK
             if (string.IsNullOrEmpty(Login_input.Text) || string.IsNullOrEmpty(password_input.Text))
             {
                 MessageBox.Show("EMPTY");
                 return;
             }
 
-            mcrm_users user = new mcrm_users();
-            user.login = Login_input.Text;
-            user.password = password_input.Text;
-            user.id_org = id_input.Text;
-            var value =  db.mcrm_users.Where(p => p.login == user.login && p.password == CalculateMD5Hash(user.password) && p.id_org == user.id_org).FirstOrDefault();
-            if (value == null)
-            {
-                MessageBox.Show("Not found");
-            }
+            var record = appdbContext.mcrm_users.FirstOrDefault(i=>i.id_org == idorg);
+            record.login = Login_input.Text;
+            record.password = CalculateMD5Hash(password_input.Text);
+            record.id_org = id_input.Text;
 
-            else
-            {
-                MessageBox.Show($"{value.id_org}  {value.login}  {value.qr_code} {value.org}");
-            }
+            appdbContext.mcrm_users.Update(record);
+            appdbContext.SaveChanges();
 
+            MessageBox.Show("Sucess");
+ 
 
         }
 
