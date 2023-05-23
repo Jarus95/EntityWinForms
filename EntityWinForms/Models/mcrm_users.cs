@@ -13,21 +13,21 @@ namespace EntityWinForms.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
         public int Id { get; set; }
-        public string Qr_code { get; set; }
-        public string Id_org { get; set; }
-        public string Login { get; set; }   
-        public string Password { get; set; }
-        public string Status { get; set; }
-        public string Status_rus { get; set; }
-        public string User_ip { get; set; }
-        public int Security { get; set; }
-        public string Enter_date { get; set; }
-        public string Enter_time { get; set;}
-        public int Id_kassa { get; set; }
-        public string Kassa { get; set; }
-        public int Id_store { get; set; }
-        public string Store { get; set; }
-        public string Org { get; set;}
+        public string qr_code { get; set; }
+        public string id_org { get; set; }
+        public string login { get; set; }   
+        public string password { get; set; }
+        public string status { get; set; }
+        public string status_rus { get; set; }
+        public string user_ip { get; set; }
+        public int security { get; set; }
+        public string enter_date { get; set; }
+        public string enter_time { get; set;}
+        public int id_kassa { get; set; }
+        public string kassa { get; set; }
+        public int id_store { get; set; }
+        public string store { get; set; }
+        public string org { get; set;}
 
 
 

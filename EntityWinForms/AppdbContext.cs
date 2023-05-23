@@ -13,7 +13,7 @@ namespace EntityWinForms
     public class AppdbContext : DbContext
     {
         public DbSet<Users> Users { get; set; }
-        public DbSet<mcrm_users> mcrm_Users { get; set; }
+        public DbSet<mcrm_users> mcrm_users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,6 +22,8 @@ namespace EntityWinForms
              ";CertificateFile=" + AppDomain.CurrentDomain.BaseDirectory + "images" + @"\" + "Certificate" + @"\" + "main_first.pfx" + ";" +
              "CertificatePassword=jQLv$c9R5(nb!uKCFPgg;" +
             "SslMode=Required";
+
+ 
 
 
             optionsBuilder.UseMySql(connString);

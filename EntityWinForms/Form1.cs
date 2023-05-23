@@ -44,15 +44,15 @@ namespace EntityWinForms
 
             mcrm_users users = new mcrm_users();
 
-            users.Qr_code = "88888888";
-            users.Id_org = "100000000099";
-            users.Login = login;
-            users.Password = password;
-            users.Status = "admin";
-            users.Org = "MCRM ENTITY";
+            users.qr_code = "88888888";
+            users.id_org = "100000000099";
+            users.login = login;
+            users.password = password;
+            users.status = "admin";
+            users.org = "MCRM ENTITY";
 
 
-            db.mcrm_Users.Add(users);
+            db.mcrm_users.Add(users);
             db.SaveChanges();
 
 
