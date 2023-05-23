@@ -268,6 +268,7 @@
       <DependentUpon>20230523101859_jfeill.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AppdbContextModelSnapshot.cs" />
+    <Compile Include="Models\mcrm_users.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
