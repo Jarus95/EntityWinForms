@@ -87,12 +87,14 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(65, 349);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(65, 329);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(103, 31);
             this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
+            this.button1.Text = "Ok";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 

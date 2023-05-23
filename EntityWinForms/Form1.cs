@@ -41,11 +41,11 @@ namespace EntityWinForms
             login =  Login_input.Text;
             password = password_input.Text;
 
-            Users users = new Users();
-            users.Login = login;
-            users.Password = password;
+            Users _users = new Users();
+            _users.Login = login;
+            _users.Password = password;
 
-            db.Users.Add(users);
+            db.Users.Add(_users);
             db.SaveChanges();
             MessageBox.Show("Сохранен");
 

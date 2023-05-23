@@ -10,6 +10,7 @@ namespace EntityWinForms.Models
 {
     public class Users
     {
+        //[Column("users")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Required]
         public long Id { get; set; }
@@ -17,5 +18,7 @@ namespace EntityWinForms.Models
         public string Login { get; set; }
 
         public string Password { get; set; }
+
+ 
     }
 }
