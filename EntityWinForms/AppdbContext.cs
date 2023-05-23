@@ -18,15 +18,10 @@ namespace EntityWinForms
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-             //string connString = "Server=83.69.136.27;Database=mcrmdemo;port=3306;User Id=mcrmdemo;password=mcrmdemo;" +
-             // ";CertificateFile=" + AppDomain.CurrentDomain.BaseDirectory + "images" + @"\" + "Certificate" + @"\" + "main_first.pfx" + ";" +
-             // "CertificatePassword=jQLv$c9R5(nb!uKCFPgg;" +
-             //"SslMode=Required";
-
-              string connString = "Server=83.69.136.27;Database=mcrmbeta;port=3306;User Id=mcrmbeta;password=mcrmbeta;" +
-               ";CertificateFile=" + AppDomain.CurrentDomain.BaseDirectory + "images" + @"\" + "Certificate" + @"\" + "main_first.pfx" + ";" +
-               "CertificatePassword=jQLv$c9R5(nb!uKCFPgg;" +
-               "SslMode=Required";
+            string connString = "Server=83.69.136.27;Database=mcrmdemo;port=3306;User Id=mcrmdemo;password=mcrmdemo;" +
+             ";CertificateFile=" + AppDomain.CurrentDomain.BaseDirectory + "images" + @"\" + "Certificate" + @"\" + "main_first.pfx" + ";" +
+             "CertificatePassword=jQLv$c9R5(nb!uKCFPgg;" +
+            "SslMode=Required";
 
 
             optionsBuilder.UseMySql(connString);
